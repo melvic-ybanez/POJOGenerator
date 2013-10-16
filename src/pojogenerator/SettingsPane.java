@@ -161,32 +161,6 @@ public class SettingsPane extends BorderPane {
 		tabSizeField.setText("4");
 		classNameField.requestFocus();
 	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result
-				+ ((tabSizeField == null) ? 0 : tabSizeField.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		SettingsPane other = (SettingsPane) obj;
-		if (tabSizeField == null) {
-			if (other.tabSizeField != null)
-				return false;
-		} else if (!tabSizeField.equals(other.tabSizeField))
-			return false;
-		return true;
-	}
 	
 	private void showErrorDialog(String message) {
 		JOptionPane.showMessageDialog(null, message, "Input Error", JOptionPane.ERROR_MESSAGE);
