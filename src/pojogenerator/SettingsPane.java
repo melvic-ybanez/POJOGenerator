@@ -109,7 +109,7 @@ public class SettingsPane extends BorderPane {
 						break;
 					}
 					String type = fieldStr.substring(0, commaIndex);
-					String field = fieldStr.substring(commaIndex + 1);
+					String field = fieldStr.substring(commaIndex + 1).trim();
 					fieldsBuff.$plus$eq(new Tuple2<String, String>(type, field));
 				}
 				
